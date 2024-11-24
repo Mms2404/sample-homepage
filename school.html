@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="boostrap.min.css" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VishalBharti</title>
+</head>
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            width:auto;
+            background:url(img/bk.jpg);
+            background-size: cover;
+            background-position: center;
+            height:109vh ;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px; /* Padding */
+            background-color:rgb(0,0,0,0.5);
+        }
+       .navbar img {
+            height: 80px; /* Set the height of the logo */
+            width: 200px;
+            margin-right: 15px; /* Space between logo and heading */
+        }
+        .navbar h1 {
+            color:black ; /* Heading color */
+            font-size: 50px; /* Heading font size */
+            margin: 0; /* Remove default margin */
+            
+        }
+        .nav-links a {
+            display:flex;
+            float:right; 
+        }
+        .nav-links a {
+            color: black; /* Link color */
+            text-decoration: none; /* Remove underline */
+            margin:0 15px; /* Space between links */
+            font-weight: bold; /* Bold links */
+        }
+        .nav-links a:hover {
+            text-decoration:underline; /* Underline on hover */
+        }
+
+        /* IMAGE ROTATOR */
+        
+        .hi-slide {
+            position: relative;
+            width:754px;
+            height:292px;
+            border-radius: 50px;
+            margin: 115px auto 0;
+        }
+
+        .hi-slide.hi-prev,.hi-slide.hi-next{
+            position: absolute;
+            top:50%;
+            width:40px;
+            height: 40px;
+            margin-top: -20px;
+            border-radius:50px;
+            text-align: center;
+            line-height:40px;
+            cursor:pointer;
+            background-color:white;
+            color:black;
+            transition: all 0.7s;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .hi-slide.hi-prev:hover,.hi-slide.hi-next:hover{
+            opacity:1;
+            background-color: white ;
+        }
+
+        .hi-slide.hi-prev{ left:59px;}
+
+        .hi-slide.hi-prev::before{
+            content:'<';
+        }
+        
+        .hi-slide.hi-next::before{
+            content:'>';
+        }
+
+        .hi-slide.hi-next{ right:-59px;}
+
+        .hi-slide{position:relative;width:754px;height:292px;margin:115px auto 0}.hi-slide .hi-next,.hi-slide .hi-prev{position:absolute;top:50%;width:40px;height:80px;margin-top:-40px;border-radius:5px;line-height:80px;text-align:center;cursor:pointer;background-color:#666;color:#fff;opacity:.7;transition:all .6s;font-size:30px}.hi-slide .hi-next:hover,.hi-slide .hi-prev:hover{opacity:1;background-color:#444}.hi-slide .hi-prev{left:-60px}.hi-slide .hi-prev::before{content:'<'}.hi-slide .hi-next{right:-60px}.hi-slide .hi-next::before{content:'>'}.hi-slide>ul{list-style:none;position:relative;width:754px;height:292px;margin:0;padding:0}.hi-slide>ul>li{overflow:hidden;position:absolute;z-index:0;left:377px;top:146px;width:0;height:0;margin:0;padding:0;border:2px solid #fff;border-radius:5px;background-color:#333;cursor:pointer}.hi-slide>ul>li>img{width:100%;height:100%}
+
+        hi.slide > ul{
+            list-style:none;
+            position:relative;
+            width: 794px;
+            height: 292px;
+            margin: 0;
+            padding:0;
+        }
+
+        hi.slide > ul >li{
+            overflow:hidden;
+            position:absolute;
+            z-index: 0;
+            left:377px;
+            top:147px;
+            width:0;
+            height:0;
+            margin:0;
+            padding:0;
+            margin: 3px solid rgb(232, 124, 196) ;
+            cursor:pointer;
+            background-color: #333; 
+        }
+
+        hi.slide > ul >li > img {
+            width:100%;
+            height:100%;
+            background-position: center;
+        }
+
+
+        /* RUNNING TEXT */
+
+        .marquee {
+            overflow: hidden; /* Hide the overflow */
+            white-space: nowrap; /* Prevent line breaks */
+            box-sizing: border-box; /* Include padding in width */
+            width: 100%; /* Full width */
+            background:rgb(90, 207, 246,0.5); /*  color */
+            color:black;
+            padding: 10px; /* Padding around the text */
+            font-size:30px;
+        }
+
+        .marquee span {
+            display: inline-block; /* Make the span inline-block */
+            animation: marquee 12s linear infinite; /* Animation properties */
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%); /* Start off-screen to the right */
+            }
+            100% {
+                transform: translateX(-100%); /* End off-screen to the left */
+            }
+        }
+
+        .hr{
+            height:5px;
+            color:rgb(77, 73, 73);
+        }
+
+        .container>p{
+            background:rgb(90, 207, 246,0.5);
+            font-size: 20px;
+            color:black;
+            text-align: center;
+           
+        }
+        
+        .h2{
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .h3{
+            text-align:center;
+            font-size: 25px;
+
+        }
+        container>.p1,container>.p2{
+            background: rgb(242, 133, 206,0.5);
+        }
+
+       
+
+
+        
+</style>
+
+
+<body>
+    <div class="navbar">
+        <div style="display: flex; align-items:center;"></div>
+        <img src="img/logo.jpeg">
+        <h1> VISHAL BHARTI SCHOOL</h1>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#admissions">Admissions</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    
+<hr class="hr">
+    <div class="slide hi-slide">
+        <div class="hi-prev"></div>
+        <div class="hi-next"></div>
+        <ul>
+            <li><img src="img/images1.jpeg" alt=""></li>
+            <li><img src="img/images2.jpeg" alt=""></li>
+            <li><img src="img/images3.jpeg" alt=""></li>
+            <li><img src="img/images4.jpeg" alt=""></li>
+            <li><img src="img/images5.jpeg" alt=""></li>
+            <li><img src="img/images6.jpeg" alt=""></li>
+            <li><img src="img/images7.jpeg" alt=""></li>
+            <li><img src="img/images8.jpg" alt=""></li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="hislide/jquery.hislide.js"></script>
+    <script>
+        $('.slide').hislide();
+    </script>
+<hr class="hr">
+<div class="marquee">
+    <span><u>   ****   REGISTRATION OPEN FOR CLASSES LKG, UKG AND I FOR THE SESSION 2025-26   ****   </u> </span>
+</div>
+<hr>
+
+<div class="container">
+    <h2><b><u>VISHAL BHARTI SENIOR SECONDARY SCHOOL</u> </b></h2>
+    <h3>Discover Vishal Bharti Senior Secondary School's Unique Approach to Learning. [ TRUTH  *  LOVE  *  SERVICE ]</h3>
+    <p>At Vishal Bharti Senior Secondary School, we believe that every student has the potential to excel academically and personally. That's why we've developed a unique approach to learning that focuses on each student's individual needs and learning style. Our teachers are dedicated to fostering a supportive and inclusive learning environment, where students are encouraged to explore new ideas and take risks. We offer a wide range of academic and extracurricular programmes that enable our students to build a strong foundation for success.</p>
+    
+    <p1>ADDRESS : Vishal Bharti Senior Secondary School, Parwana Road, Pundrik Vihar, Pitam Pura, New Delhi, Delhi, India</p1>
+
+    <p2>CONTACT : 9354937851/54</p2>
+</div>
+
+
+</body>
+</html>
